@@ -1,0 +1,603 @@
+/* STYLES GENERALES */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: lightpink;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    rotate: 45deg;
+}
+
+.barra-header{
+    background-color: black;
+    background-size: cover;
+    height: 130px;
+    padding: 20px 40px 0px 40px;
+}
+
+
+/* MAIN e INDEX MAIN e INDEX MAIN e INDEX MAIN e INDEX MAIN e INDEX MAIN e INDEX MAIN e INDEX */
+/* MAIN e INDEX MAIN e INDEX MAIN e INDEX MAIN e INDEX MAIN e INDEX MAIN e INDEX MAIN e INDEX */
+
+
+/* HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER  */
+/* HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER  */
+
+header .barra-header nav ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+
+header .barra-header img {
+    float: left;
+}
+
+ul {
+    list-style: none;
+    font-size:0 /* truco por el uso de inline-block*/
+}
+
+ul li img {
+    vertical-align: auto;
+    width: 100px;
+    height: 100px;
+    padding: 10px 0 0 0;
+}
+
+li {
+    display: inline-block;
+    width: 3.5%;
+    height: 70%;
+    position:relative;
+    font-size: 14px;
+    margin-right: 100px;
+}
+ul ul {
+    margin: 10px 0 0 0;
+    background-color: gray;
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+ul ul li {
+    padding: 1%;
+    display: block;
+}
+ul li:hover ul {
+    display:block;
+    border: solid 1px white;
+}
+
+header div nav ul li ul li {
+    font-size: 40px;
+}
+
+
+header div nav ul li a {
+    text-decoration: none;
+    color: purple;
+    line-height: 26px;
+}
+
+/* HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER  */
+/* HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER  */
+
+.productos .contenedor {
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(4, 1fr);
+    grid-template-areas: 
+    "remeras camperas buzos pantalones"
+    /* "buzos pantalones" */
+    ;
+    margin: 20px 0;
+}
+
+.productos .contenedor figcaption{
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+main .productos h2 {
+    color: rgb(30, 30, 30);
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline;
+    margin: 20px 0 30px 20px;
+}
+
+main .productos h3 {
+
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.contenedor figcaption {
+    font-size: 30px;
+    font-weight: bold;
+    color: blueviolet;
+}
+
+.banner__main {
+    height: 800px;
+    width: 100%;
+    background-image: url(/img/Fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+main .productos .contenedor figure {
+    text-align: center;
+    margin: 0 20px;
+}
+
+main .productos .contenedor figure img {
+    height: 30vh;
+    width: 30vh;
+}
+
+.contenedor .remeras{
+    grid-area: remeras;
+}
+.contenedor .camperas{
+    grid-area: camperas;
+}
+.contenedor .buzos{
+    grid-area: buzos;
+}
+.contenedor .pantalones{
+    grid-area: pantalones;
+}
+
+@media (max-width: 2070px){
+
+    .productos .contenedor {
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        grid-template-areas: 
+        "remeras camperas" 
+        "buzos pantalones"
+        ;
+        margin: 40px;
+        row-gap: 40px;
+    }
+
+}
+
+@media (max-width: 1140px){
+
+    .productos .contenedor {
+        display: grid;
+        grid-template: repeat(4, 1fr) / repeat(1, 1fr);
+        grid-template-areas: 
+        "remeras" 
+        "camperas" 
+        "buzos" 
+        "pantalones"
+        ;
+        margin: 40px;
+        row-gap: 40px;
+    }
+
+    .banner__main {
+        height: 600px;
+    }
+
+}
+
+
+@media (max-width: 540px){
+
+    main .productos .contenedor figure img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .banner__main {
+        height: 400px;
+    }
+
+}
+
+
+/* MAIN e INDEX MAIN e INDEX MAIN e INDEX MAIN e INDEX MAIN e INDEX MAIN e INDEX MAIN e INDEX */
+/* MAIN e INDEX MAIN e INDEX MAIN e INDEX MAIN e INDEX MAIN e INDEX MAIN e INDEX MAIN e INDEX */
+
+/* PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS  */
+/* PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS  */
+
+.up {
+    position: fixed;
+    /* position: absolute; */
+    right: 50px;
+    bottom: 50px;
+    /* background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="100" height="100" viewBox="0 0 64 64"%3E%3Cpath fill="%23f2b200" d="M0 0h64v64H0z"%2F%3E%3Cg fill="%23ffdf99"%3E%3Ccircle cx="32" cy="32" r="10.7"%2F%3E%3Cpath d="M3.5 4.2c2.3 4.5 5.6 8.4 9.2 11.8c3.3 3.2 7.2 6.4 11.5 8.2c-1.9-4.6-5.4-8.8-8.9-12.3c-3.6-3.5-7.7-7.1-12.4-9c.2.4.4.9.6 1.3m38.7 15.7c-.9 1.4-1.7 2.8-2.4 4.3c4.6-1.9 8.8-5.5 12.3-8.9c3.5-3.5 7-7.6 8.9-12.3c-3.6 1.5-6.9 4.1-9.9 6.6c-3.3 3-6.4 6.4-8.9 10.3M29.9.4c-.4 3.7-.4 7.4 0 11c.3 3.2.8 6.5 2.1 9.5c2-4.7 2.4-10.3 2.4-15.4c0-1.4-.1-2.7-.2-4.1c0-.1-.1-1.4-.2-1.4h-2.8c-.6 0-1.2-.2-1.3.4M18.7 3.2c1 3.5 2.3 7 4 10.3c1.4 2.9 3.1 5.8 5.4 8.1c.2-5.1-1.5-10.5-3.3-15.2c-.5-1.4-1.1-2.7-1.8-4.1c-.4-.6-.8-2.3-1.6-2.3h-3.5c.3 1.1.5 2.2.8 3.2m24.3-1c-1.8 3.2-3.3 6.6-4.5 10.1c-1 3-1.9 6.3-1.9 9.5c2.8-2.6 4.9-6.1 6.6-9.4c2.1-3.9 3.7-8.1 4.7-12.4h-3.6C44 0 43.1 1.9 43 2.2m20.6 27.7c-3.7-.4-7.4-.4-11 0c-3.2.3-6.6.8-9.5 2.1c4.7 2 10.3 2.4 15.4 2.4c1.4 0 2.7-.1 4.1-.2c.2 0 1.4-.1 1.4-.2v-2.8c0-.6.2-1.2-.4-1.3m-2.8-11.2c-3.5 1-7 2.3-10.3 4c-2.9 1.4-5.8 3.1-8.1 5.4c5.1.2 10.5-1.5 15.2-3.3c1.4-.5 2.7-1.1 4.1-1.8c.6-.3 2.3-.8 2.3-1.5V18c-1.1.2-2.2.4-3.2.7M.4 34.1c3.7.4 7.4.4 11 0c3.2-.3 6.5-.8 9.5-2.1c-4.7-2-10.3-2.4-15.4-2.4c-1.4 0-2.7.1-4.1.2c-.1 0-1.4.1-1.4.2v2.9c0 .5-.2 1.1.4 1.2M2.2 21c3.2 1.8 6.6 3.3 10.1 4.5c3 1 6.3 1.9 9.5 1.9c-2.6-2.8-6.1-4.9-9.4-6.6c-3.9-2-8.1-3.7-12.4-4.7v3.6c0 .3 1.9 1.2 2.2 1.3"%2F%3E%3C%2Fg%3E%3Cpath fill="%233e4347" d="M0 29.8v11.3l16.7-4.4z"%2F%3E%3Cpath fill="%23d0d0d0" d="m64 31.8l-16.7-9.5L32 35l-15.3-7.7L0 38.5v4.2h64z"%2F%3E%3Cpath fill="%233e4347" d="m47.3 22.3l5.6 6.6l-10.2 3.6l12.9 4.2l-12.9 3.8l-26-13.2l-4.2 7.7l8.8 1.7l-4.6 6H64V31.8z"%2F%3E%3Cpath fill="%2383bf4f" d="M64 39.8c-1.8.3-3.6.9-5.1 1.7c-.9-1.2-2.4-2-4-2c-1.4 0-2.7.6-3.6 1.5c-.4-.3-.8-.5-1.3-.5c-.8 0-1.5.5-1.8 1.1c-.7-.3-1.5-.5-2.3-.5c-1.2 0-2.2.4-3.1 1c-1.4-1.6-3.4-2.6-5.6-2.6c-2.2 0-4.2 1-5.5 2.5c-.6-.9-1.5-1.5-2.7-1.5c-1.4 0-2.6.9-3 2.2c-1-1-2.3-1.7-3.8-1.7c-1.1 0-2.1.3-2.9.9c-.1-2.9-2.4-5.2-5.4-5.2c-2.7 0-4.9 1.9-5.3 4.5c-1.3-1.1-2.9-1.7-4.7-1.7c-1.4 0-2.6.4-3.7 1V64h64L64 39.8"%2F%3E%3Cpath fill="%23699635" d="M63.5 47.2c-2.4-1.2-5.4-1.2-7.7.3c-.6-2.4-2.8-4.4-5.4-4.4c-2.5 0-6.1 1.8-6.1 4.7c-1.9-.8-4.3-.7-5.9.6c-1-1.6-3.1-2.1-4.8-1.5c-.7.3-.9 1-1.7.4c-.8-.6-1.7-1.1-2.7-1.3c-1.9-.5-3.9-.4-5.6.4c-.4.2-.8.4-1.2.7c-.4.3-.8.8-1.2 1c-.2.1-.7-.2-.9-.3c-.5-.2-1.1-.3-1.7-.4c-.9-.1-1.6.2-2.4.4c-.3.1-.5-.3-.7-.4c-.3-.2-.8-.4-1.2-.4c-.6 0-1.1.4-1.7.3c-.2 0-.7-.4-.9-.5l-1.5-.6c-1.8-.4-3.8.2-5.1 1.6c-.5.5-1.5-.2-2.1-.4c-1.1-.3-2.1-.6-3.2-.7c1.7.5 3.4 1 4.9 1.9c.5.3.8-.5 1.2-.8c.8-.6 1.7-.9 2.7-1c.9 0 1.7.2 2.5.6c.5.3.8.9 1.3 1.2c.2.1.5-.2.6-.3c.3-.3.7-.3 1.1-.2c.4.1.7.3.9.6c.2.2.2.6.6.6c.9-.2 1.6-.6 2.6-.5c1 .1 1.9.5 2.7 1c.4.3.6-.1 1-.4c.4-.4.8-.7 1.3-1.1c3.1-2.4 6.9-.5 9.2 1.9c.8-1 1.7-2.2 3.2-1.8c1.3.3 1.7 1.7 2.1 2.8c1-1 2.1-2 3.5-2.2c1.6-.2 2.9.5 4.2 1.3c.2-2.8 1.1-5.3 4.1-5.8c3-.5 5 1.9 5.7 4.5c2.5-2.1 5.6-2.7 8.6-1.3c0-.3-.1-.4-.3-.5m.5 11.2c-2.3-1.8-5.6-2.2-8.3-1c-.7.3-1.4.8-2 1.3c-.7.6-1 .1-1.9-.1c-.7-.2-1.5-.2-2.2-.1c-.1 0-1.5.4-1.5.4c-.4-.6-1.2-.9-1.9-.9c-.3 0-.6.1-.9.2c-.6.2-.5.2-1.1-.2c-1.3-.8-2.8-1-4.2-.7c-.6.2-1.3.5-1.8.8c-.4.3-.9 1.1-1.4.9c-1.6-.6-3.1-1-4.7-1.3c1.6.4 3.3.9 4.8 1.8c.5.4.7 0 1-.4c.6-.7 1.6-1 2.4-1.2c.9-.1 1.7-.1 2.5.3c.7.3 1.1.8 1.6 1.2c.5.4.8 0 1.3-.3c.8-.4 1.5.3 1.8.9c.3.5 1.2-.1 1.7-.2c1-.2 2.1-.1 3 .4c.2.1 1.1.9 1.4.8c.5-.4.9-1 1.4-1.4c2.8-2.1 6.7-1.5 9.1 1c-.1-.8-.1-1.7-.1-2.2m-13.8 1.2s.1 0 0 0m-15.1-4.5c-2.4-1.3-5.4-1.2-7.7.3C26.8 53 24.6 51 22 51c-1.6 0-3.2.5-4.3 1.6c-.5.5-1 1.1-1.3 1.7c-.2.4-.2 1.1-.5 1.4c-1.4-.6-3.2-.7-4.6-.1c-.4.2-1.2.9-1.5.5c-.4-.6-1.1-1-1.7-1.3c-.7-.3-1.5-.3-2.2-.2c-.3.2-.6.3-.9.4c-.2.1-.8.7-1 .6c-.2 0-.5-.4-.7-.5c-.4-.3-.7-.5-1.1-.7c-.7-.3-1.4-.6-2.2-.7v1.4c0 .2 1.3.6 1.6.7c1 .5 1.8 1.4 2.6 2.2c.8-1 1.7-2.2 3.2-1.8c1.3.3 1.7 1.7 2.1 2.8c1-1 2.1-2 3.5-2.2c1.6-.2 2.9.5 4.2 1.3c.2-2.8 1.1-5.3 4.1-5.8c3-.5 5 1.9 5.7 4.5c2.5-2.1 5.6-2.7 8.6-1.3c-.1-.2-.3-.3-.5-.4"%2F%3E%3C%2Fsvg%3E'); */
+    height: 100px;
+    width: 100px;
+    /* background-image: url('https://api.iconify.design/mdi/arrow-top-bold-circle.svg?color=rgba(255%2C%2068%2C%20255%2C%200.6)') no-repeat center center / contain; */
+    background-image: url('https://api.iconify.design/mdi/arrow-top-bold-circle.svg?color=rgba(255%2C%2068%2C%20255%2C%200.6)');
+    background-size: cover;
+    filter: opacity(100%);
+    background-color: white;
+    border-radius: 100px;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.up:hover{
+    background-color: black;
+    animation-duration: 1.5s;
+}
+
+.main-productos h1{
+    background-color: lightsalmon;
+    color: blueviolet;
+    border-top: solid white 5px;
+    border-bottom: solid white 5px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 100px;
+}
+
+.main-productos h2{
+    background-color: lightcoral;
+    color: blueviolet;
+    border-top: solid white 5px;
+    border-bottom: solid white 5px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 60px;
+}
+
+.main-productos h3{
+    background-color: rgb(240, 144, 144);
+    color: white;
+    font-weight: bold;
+    border-top: solid white 5px;
+    border-bottom: solid white 5px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.seccion-productos {
+    text-align: center;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+
+.seccion-productos figure {
+    border: solid white 5px;
+    border-radius: 10px;
+    background-color: lightcoral;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.seccion-productos img {
+    width: 500px;
+    height: 500px;
+}
+
+.seccion-productos figure figcaption {
+    background-color: white ;
+    width: 300px;
+    color: blueviolet;
+    font-size: 35px;
+    font-weight: bold;
+    border-radius: 5px 5px 35px 35px;
+}
+
+.seccion-productos figure a:hover img {
+    background-color: blueviolet;
+    border-radius: 100px;
+}
+
+.contenedor-productos div div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 100px 0;
+}
+
+.contenedor-productos div div div {
+    text-align: center;
+    display: block;
+}
+
+.contenedor-productos div div div .nombre-producto {
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.contenedor-productos div div div .producto-precio {
+    font-size: 25px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.contenedor-productos div div div img {
+    width: 400px;
+    height: 400px;
+}
+
+/* @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS)  */
+/* @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS)  */
+
+@media (max-width: 600px){
+
+    .main-productos h1{
+        font-size: 85px;
+    }
+
+    .seccion-productos img {
+        width: 300px;
+        height: 300px;
+    }
+
+}
+
+/* @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS)  */
+/* @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS) @MEDIA (PRODUCTOS)  */
+
+/* PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS  */
+/* PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS  */
+
+/* OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS */
+/* OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS */
+
+.main__ofertas {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10% 0;
+}
+
+.main__ofertas h3 {
+    text-align: center;
+    font-size: 100px;
+    margin: 40px 0;
+    width: 100%;
+}
+
+.main__ofertas .contenedor-ofertas {
+    text-align: center;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template: repeat(4, 1fr)/ repeat(4, 1fr); */
+    grid-template-areas: 
+    "unoo doss tress cuatroo"
+    ;
+    font-size: 50px;
+    margin: 20px 0;
+    height: 50vh;
+    /* ------------------------- */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 50px;
+    margin: 20px 0;
+    height: 50vh;
+    width: 100%; */
+}
+
+.ofertas:first-child {
+    grid-area: unoo;
+}
+
+.ofertas:nth-child(2) {
+    grid-area: doss;
+}
+
+.ofertas:nth-child(3) {
+    grid-area: tress;
+}
+
+.ofertas:nth-child(4) {
+    grid-area: cuatroo;
+}
+
+
+.main__ofertas .contenedor-ofertas .ofertas {
+    margin: 40px 0;
+}
+
+
+.ahora {
+    margin: 20px 0;
+    font-weight: bold;    
+}
+
+.antes {
+    margin: 20px 0;
+    text-decoration: line-through;
+}
+
+.footer {
+    margin: 210px 0 0 0;
+}
+
+
+/* @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] */
+/* @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] */
+
+@media (max-width: 1024px){
+    
+    .main__ofertas h3{
+        font-size: 60px;
+    }
+
+    .main__ofertas .contenedor-ofertas {
+        grid-template: repeat(2, 1fr)/ repeat(2, 1fr);
+        grid-template-areas: 
+        "unoo doss" 
+        "tress cuatroo"
+        ;
+        font-size: 25px;
+        margin: 10px 0;
+    }
+
+    .ofertas img{
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+@media (max-width: 720px){
+
+    .main__ofertas .contenedor-ofertas {
+        grid-template: repeat(4, 1fr)/ repeat(1, 1fr);
+        grid-template-areas: 
+        "unoo" 
+        "doss" 
+        "tress" 
+        "cuatroo"
+        ;
+        font-size: 25px;
+        margin: 10px 0;
+        height: auto;
+    }
+
+}
+
+/* @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] */
+/* @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] */
+
+
+/* OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS */
+/* OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS OFERTAS */
+
+/* NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS */
+/* NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS */
+
+.main-nosotros h2 {
+    text-align: center;
+    font-size: 150px;
+    width: 100%;
+}
+
+.main-nosotros {
+    flex-wrap: wrap;
+    height: 70vh;
+    background-image: url(/img/OIP.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.contenedor-nosotros {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobrenosotros {
+    font-size: 35px;
+    text-align: center;
+    background-color: white;
+    filter: opacity(85%);
+}
+
+.sobrenosotros span {
+    font-weight: bold;
+}
+
+/* @MEDIA (NOSOTROS) @MEDIA (NOSOTROS) @MEDIA (NOSOTROS) @MEDIA (NOSOTROS) @MEDIA (NOSOTROS) @MEDIA (NOSOTROS)  */
+/* @MEDIA (NOSOTROS) @MEDIA (NOSOTROS) @MEDIA (NOSOTROS) @MEDIA (NOSOTROS) @MEDIA (NOSOTROS) @MEDIA (NOSOTROS)  */
+
+@media (max-width: 1024px){
+
+    .main-nosotros h2 {
+        font-size: 120px;
+    }
+
+    .sobrenosotros {
+        font-size: 28px;
+        text-align: center;
+        background-color: white;
+        filter: opacity(85%);
+    }
+
+}
+
+@media (max-width: 720px){
+
+    .main-nosotros h2 {
+        font-size: 90px;
+    }
+
+    .sobrenosotros {
+        font-size: 20px;
+        text-align: center;
+        background-color: white;
+        filter: opacity(85%);
+    }
+
+}
+
+
+/* @MEDIA (NOSOTROS) @MEDIA (NOSOTROS) @MEDIA (NOSOTROS) @MEDIA (NOSOTROS) @MEDIA (NOSOTROS) @MEDIA (NOSOTROS)  */
+/* @MEDIA (NOSOTROS) @MEDIA (NOSOTROS) @MEDIA (NOSOTROS) @MEDIA (NOSOTROS) @MEDIA (NOSOTROS) @MEDIA (NOSOTROS)  */
+
+/* NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS */
+/* NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS */
+
+/* MAIN CONTACTO MAIN CONTACTO MAIN CONTACTO MAIN CONTACTO MAIN CONTACTO MAIN CONTACTO MAIN CONTACTO */
+
+form fieldset {
+    margin: 100px;
+}
+
+.main__contacto {
+    text-align: center;
+    font-size: 40px;
+}
+
+.main__contacto h3{
+    margin: 50px 0 0 0;
+    font-size: 60px;
+}
+
+.main__contacto p{
+    text-decoration: underline;
+}
+
+.main__contacto label{
+    display: block;
+}
+
+.main__contacto button {
+    color: white;
+    padding: 20px;
+    margin: 0 0 50px 0;
+    border: none;
+    background-color: blueviolet;
+}
+
+/* MAIN CONTACTO MAIN CONTACTO MAIN CONTACTO MAIN CONTACTO MAIN CONTACTO MAIN CONTACTO MAIN CONTACTO */

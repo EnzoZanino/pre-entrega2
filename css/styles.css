@@ -132,7 +132,7 @@ main .productos h3 {
 .banner__main {
     height: 800px;
     width: 100%;
-    background-image: url(/img/Fondo.jpg);
+    background-image: url(./img/Fondo.jpg);
     background-size: cover;
     background-position: center;
     

@@ -219,6 +219,7 @@ main .productos .contenedor figure img {
 /* PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS PRODUCTOS  */
 
 .up {
+    z-index: 2;
     position: fixed;
     /* position: absolute; */
     right: 50px;

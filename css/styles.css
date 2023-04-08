@@ -505,7 +505,7 @@ main .productos .contenedor figure img {
 .main-nosotros {
     flex-wrap: wrap;
     height: 70vh;
-    background-image: url(/img/OIP.jpeg);
+    background-image: url(../img/OIP.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

@@ -602,4 +602,48 @@ form fieldset {
     background-color: blueviolet;
 }
 
+@media (max-width: 720px){
+
+    .main__contacto {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .main__contacto input{
+        height: 50px;
+        width: 300px;
+    }
+
+    .main__contacto textarea {
+        width: 300px;
+        height: 200px;
+    }
+
+    .main__contacto button {
+        font-size: 25px;
+        width: 150px;
+        height: 60px;
+        color: white;
+        padding: 10px;
+        margin: 0 0 50px 0;
+        border: none;
+        background-color: blueviolet;
+    }
+}
+
+@media (max-width: 540px){
+
+    .main__contacto input{
+        height: 40px;
+        width: 200px;
+    }
+
+    .main__contacto textarea {
+        width: 200px;
+        height: 100px;
+    }
+
+}
+
+
 /* MAIN CONTACTO MAIN CONTACTO MAIN CONTACTO MAIN CONTACTO MAIN CONTACTO MAIN CONTACTO MAIN CONTACTO */

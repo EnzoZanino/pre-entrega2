@@ -9,6 +9,12 @@
 
 body {
     background-color: lightpink;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    justify-self: end;
 }
 
 .logo {
@@ -201,12 +207,12 @@ main .productos .contenedor figure img {
 @media (max-width: 540px){
 
     main .productos .contenedor figure img {
-        height: 300px;
-        width: 300px;
+        height: 250px;
+        width: 250px;
     }
 
     .banner__main {
-        height: 400px;
+        height: 350px;
     }
 
 }
@@ -439,15 +445,14 @@ main .productos .contenedor figure img {
     text-decoration: line-through;
 }
 
-.footer {
-    margin: 210px 0 0 0;
+.footer-oferta {
+    margin-top: 220px;
 }
 
-
 /* @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] */
 /* @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] @MEDIA (1) @MEDIA [1] */
 
-@media (max-width: 1024px){
+@media (max-width: 1240px){
     
     .main__ofertas h3{
         font-size: 60px;
@@ -496,6 +501,12 @@ main .productos .contenedor figure img {
 
 /* NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS */
 /* NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS */
+
+.body-nosotros {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
 
 .main-nosotros h2 {
     text-align: center;
@@ -552,7 +563,7 @@ main .productos .contenedor figure img {
 @media (max-width: 720px){
 
     .main-nosotros h2 {
-        font-size: 90px;
+        font-size: 80px;
     }
 
     .sobrenosotros {
@@ -560,6 +571,25 @@ main .productos .contenedor figure img {
         text-align: center;
         background-color: white;
         filter: opacity(85%);
+    }
+
+}
+
+@media (max-width: 540px){
+
+    .main-nosotros h2 {
+        font-size: 60px;
+    }
+
+    .sobrenosotros {
+        font-size: 16px;
+        text-align: center;
+        background-color: white;
+        filter: opacity(85%);
+    }
+
+    .navbar .container-fluid p {
+        font-size: 10px;
     }
 
 }
@@ -643,9 +673,13 @@ form fieldset {
 
 @media (max-width: 540px){
 
+    .main__contacto h3 {
+        font-size: 30px;
+    }
+
     .main__contacto input{
         height: 40px;
-        width: 200px;
+        width: 180px;
     }
 
     .main__contacto textarea {

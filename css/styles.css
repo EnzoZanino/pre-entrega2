@@ -504,8 +504,9 @@ main .productos .contenedor figure img {
 }
 
 .main-nosotros {
-    flex-wrap: wrap;
-    height: 70vh;
+    display: flex;
+    justify-content: center;
+    height: 85vh;
     background-image: url(../img/OIP.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -513,7 +514,6 @@ main .productos .contenedor figure img {
 }
 
 .contenedor-nosotros {
-    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -598,9 +598,18 @@ form fieldset {
 .main__contacto button {
     color: white;
     padding: 20px;
-    margin: 0 0 50px 0;
     border: none;
-    background-color: blueviolet;
+    background-color: rgb(155, 55, 255);
+    transition: 1sg;
+}
+
+/* .main__contacto .footer {
+    margin-top: 10px;
+} */
+
+.button-enviar:hover{
+    background-color: rgb(70, 20, 70);
+    border: solid 2px white;
 }
 
 @media (max-width: 720px){
